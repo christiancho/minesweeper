@@ -1,0 +1,109 @@
+@import 'reset.css';
+
+body {
+  font-family: 'Questrial', 'Arial', sans-serif;
+}
+
+header {
+  text-align: center;
+}
+
+header > h1 {
+  font-size: 36px;
+  margin: 20px auto;
+  text-transform: uppercase;
+}
+
+section.instructions {
+  font-size: 20px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+div#board {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+  width: 600px;
+}
+
+ul.row {
+  display: flex;
+}
+
+ul.row > li {
+  background-color: #EEE;
+  border: 5px outset #EEE;
+  flex: auto;
+  height: 30px;
+  line-height: 2;
+  text-align: center;
+  transition: 0.1s;
+  width: 30px;
+}
+
+ul.row > li:hover {
+  background-color: #FFF;
+}
+
+ul.row > li.explored {
+  background-color: #DDD;
+  border-color: #DDD;
+  border-style: inset;
+}
+
+ul.row > li.bombed {
+  background-color: #ea094c;
+  border-color: #ea094c;
+  border-style: inset;
+}
+
+.flagged:after {
+  content: "⚑";
+  color: #e59409;
+}
+
+.bombed:after {
+  content: "💣";
+  color: #db610a;
+}
+
+.modal-back {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.modal-message {
+  background-color: #EEE;
+  border-radius: 5px;
+  font-size: 24px;
+  left: 50%;
+  padding: 30px;
+  position: absolute;
+  top: 200px;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.modal-message > input[type=submit] {
+  background-color: #444;
+  border: none;
+  border-radius: 5px;
+  color: #EEE;
+  display: block;
+  font-size: 16px;
+  height: 50px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  outline: none;
+  width: 150px;
+}
+
+.modal-message > input[type=submit]:hover {
+  background-color: #666;
+}
